@@ -67,7 +67,7 @@ header nav a {
     color: white;
     text-decoration: underline;
     text-decoration-color: gold;
-    transition: 1s;
+    transition: .25s;
 }
     header nav a:hover {
         color: black; 
@@ -148,6 +148,11 @@ footer a {
     object-fit: contain;
     width: 70%;
     margin: 0 auto;
+    transition: .25s;
+}
+
+.footer_social a img:hover {
+    width: 100%;
 }
 
 /* ----------------------- Media Queries -------------------------------- */
