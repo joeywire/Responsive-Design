@@ -1,0 +1,245 @@
+/* Standard Formatting */
+* {
+    box-sizing: border-box;
+    /* border: 1px solid grey; */
+}
+
+html {
+    font-size: 62.5%;
+    background: black;
+}
+
+body {
+    font-size: 1.6rem;
+    line-height: 1.5;
+    font-family: 'Archivo', sans-serif;
+    width: 90%;
+    margin: 0 auto;
+    background: white;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Ubuntu', sans-serif;
+}
+    h1 {
+        font-size: 6rem;
+    }
+    h2{
+        font-size: 4rem;
+    }
+    h4 {
+        font-size: 2rem;
+    }
+
+a {
+    text-decoration: none; 
+    color: #5f5f5f;
+    font-size: 2rem;
+}
+
+img {
+    filter: grayscale(70%);
+}
+
+img:hover {
+    filter: none;
+}
+/* ------------------- Header ------------------- */
+
+.title {
+    margin: 0 auto 1.5%;
+    text-align: center;
+    padding-top: 1%;
+}
+
+header nav {
+    display: flex; 
+    justify-content: center;
+}
+
+header nav a {
+    display: inline-block;
+    width: 10%;
+    text-align: center;
+    padding: 1% 0;
+    border: 2px solid grey;
+    background: black;
+    color: white;
+    text-decoration: underline;
+    text-decoration-color: gold;
+    transition: .25s;
+}
+    header nav a:hover {
+        color: black; 
+        background: white; 
+        border: 2px solid gold;
+        text-decoration-color: darkgrey;
+    }
+
+.subtitle {
+    margin: 1% auto;
+    text-align: center;
+}
+.header_blurb {
+    margin:0 auto 3%;
+    background: lightgrey;
+    width: 95%;
+
+}
+header p {
+    padding: 1% 5%;
+    text-align: center;
+}
+
+/* --------------- Content Formatting -------------------- */
+.home_image img {
+    width: 100%;
+    height: 50vh;
+    overflow: hidden;
+    object-fit: cover;
+    object-position: 50% 35%;
+}
+
+.home_projects {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 2% 0 3%;
+    text-align: left;
+}
+
+.home_projects div, .home_projects img{
+    width: 18%;
+}
+
+.home_projects img {
+    height: 100%;
+}
+
+.project_list h4 {
+    text-decoration: underline;
+    padding: 2% 0;
+}
+.project_list ul {
+    list-style-type: square;
+}
+
+/* ----------------------- Footer ___________________________*/
+
+footer {
+    height: 15vh;
+    background: grey;  
+    
+}
+
+.footer_social {
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+}
+
+footer a {
+    display: flex;
+    height: 15vh;
+    margin: 0 1%
+}
+
+.footer_social a img {
+    object-fit: contain;
+    width: 70%;
+    margin: 0 auto;
+    transition: .25s;
+}
+
+.footer_social a img:hover {
+    width: 100%;
+}
+
+/* ----------------------- Media Queries -------------------------------- */
+
+/* Styles for Tablet @ 800 px */ 
+
+@media (max-width:800px) {
+    body {
+        width: 100%;
+    }
+
+    header nav a {
+        width: 15%;
+    }
+
+    .home_projects {
+        display: flex; 
+        flex-flow: row wrap;
+        justify-content: space-around;
+        border-top: 1px dashed black;
+        padding-top: 2%;
+    }
+
+    .home_projects img {
+        width: 23%
+    }
+
+    .home_projects div {
+        width: 100%;
+        text-align: center;
+    }
+
+    .footer_social a img {
+        width: 60%;
+    }
+}
+
+/* Styles for phone @ 500px  */
+
+@media (max-width: 500px) {
+    h2 {
+        font-size: 2.5rem;
+    }
+    
+    header nav {
+        display: flex; 
+        flex-flow: column nowrap; 
+        align-items: center;
+    }
+    header nav a {
+        font-size: 1.6rem;
+        width: 25%
+    }
+
+    .subtitle {
+        margin: 4% 0;
+    }
+
+    .header_blurb {
+        margin: 0 auto 5%;
+    }
+
+    header p {
+        padding: 1% 3%;
+    }
+
+    .home_image img {
+        height: 30vh;
+    }
+
+    .home_projects {
+        margin-bottom: 7%;
+    }
+    .home_projects img {
+        width: 45%;
+        margin-bottom: 5%;
+    }
+
+    .home_projects li {
+        font-size: 1.4rem;
+    }
+
+    footer {
+        height: 10vh;
+    }
+
+    footer a {
+        height: 10vh;
+    }
+}
